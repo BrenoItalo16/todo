@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:todo/task.dart';
 
 void main() {
   runApp(
@@ -18,25 +20,18 @@ class AppWidget extends StatefulWidget {
 
 class _AppWidgetState extends State<AppWidget> {
   var align = Alignment.centerLeft;
+  bool? isChecked = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: GestureDetector(
-        onTap: () {
-          setState(() {
-            align = Alignment.centerRight;
-          });
-        },
-        child: Align(
-          alignment: align,
-          child: Container(
-            width: 100,
-            height: 100,
-            color: Colors.amber,
-          ),
-        ),
+      body: Column(
+        spacing: 30,
+        children: [
+          TaskWidget(taskText: 'teste', color: Colors.blue),
+          TaskWidget(taskText: 'fazer prova amanha', color: Colors.cyan),
+          TaskWidget(taskText: 'fdjhasdjahskjd', color: Colors.orange)
+        ],
       ),
     );
   }
