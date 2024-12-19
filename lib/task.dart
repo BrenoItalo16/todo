@@ -19,6 +19,7 @@ class _TaskWidgetState extends State<TaskWidget> {
 
   @override
   Widget build(BuildContext context) {
+    double deviceWidth = MediaQuery.of(context).size.width;
     return Row(
       children: [
         Transform.scale(
@@ -44,15 +45,19 @@ class _TaskWidgetState extends State<TaskWidget> {
             borderRadius: BorderRadius.circular(8),
             color: widget.color,
           ),
-          width: 200,
+          width: deviceWidth - 96,
           height: 36,
-          child: Center(
-            child: Text(
-              widget.taskText,
-              style: TextStyle(
-                color: const Color.fromARGB(255, 0, 0, 0),
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                widget.taskText,
+                style: TextStyle(
+                  color: const Color.fromARGB(255, 0, 0, 0),
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ),
