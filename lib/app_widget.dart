@@ -19,8 +19,15 @@ class _AppWidgetState extends State<AppWidget> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
         child: Column(
-          spacing: 30,
+          spacing: 12,
           children: [
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Tarefas',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
+              ),
+            ),
             TaskWidget(taskText: 'Ligar para o advogado', color: Colors.blue),
             TaskWidget(taskText: 'Lavar o carro', color: Colors.cyan),
             TaskWidget(
