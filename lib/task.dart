@@ -54,10 +54,11 @@ class _TaskWidgetState extends State<TaskWidget> {
               child: Text(
                 widget.taskText,
                 style: TextStyle(
-                  color: const Color.fromARGB(255, 0, 0, 0),
+                  color: const Color.fromARGB(126, 0, 0, 0),
                   fontSize: 12,
                   fontWeight: FontWeight.bold,
                 ),
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ),

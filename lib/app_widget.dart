@@ -21,9 +21,10 @@ class _AppWidgetState extends State<AppWidget> {
         child: Column(
           spacing: 30,
           children: [
-            TaskWidget(taskText: 'teste', color: Colors.blue),
-            TaskWidget(taskText: 'fazer prova amanha', color: Colors.cyan),
-            TaskWidget(taskText: 'fdjhasdjahskjd', color: Colors.orange)
+            TaskWidget(taskText: 'Ligar para o advogado', color: Colors.blue),
+            TaskWidget(taskText: 'Lavar o carro', color: Colors.cyan),
+            TaskWidget(
+                taskText: 'Comprar ração do cachorro', color: Colors.orange)
           ],
         ),
       ),
